@@ -1,0 +1,22 @@
+html 
+    head  
+        title=titulo
+        link(rel='stylesheet', href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel='stylesheet', href='estilos.css')
+    body 
+        div.container  
+            input(type="text" placeholder="numero" id="numero")
+            input(type="text" placeholder="nombre" id="nombre")
+            button(id="btn_agregar") agregar contacto 
+            
+            p= "--Lista--"
+            each contacto in contactos 
+                    div.contacto
+                        
+                        p= `${contacto.id_contacto} _Numero:  ${contacto.numero_contacto} _Nombre:  ${contacto.nombre_contacto}`
+                        span(class='borrar material-icons' id=contacto.id_contacto) delete
+    
+script(src="funciones.js")
+
+
+
